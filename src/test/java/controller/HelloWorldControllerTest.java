@@ -39,7 +39,7 @@ public class HelloWorldControllerTest {
 
         // Act
         ResponseEntity<Object> responseEntity = helloWorldController.getWelcomeMessage();
-
+        System.out.println(responseEntity.getBody());
         // Assert
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
         assertEquals(expectedMessage, responseEntity.getBody());
